@@ -11,17 +11,12 @@ export default function SplashScreen() {
 
   const { theme } = useTheme()
 
-  const setCookie = () => {
-    Cookies.set('Splashed', 'true', { expires: 1 })
-  }
-
   useEffect(() => {
     // if (typeof Cookies.get('Splashed') != 'undefined') return
     setToShow(true)
     setTimeout(() => setHeight('h-full'), 500)
     setTimeout(() => setOpacity('opacity-0'), 1500)
     setTimeout(() => {
-      setCookie()
       setToShow(false)
     }, 2200)
   }, [])
