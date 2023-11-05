@@ -1,7 +1,7 @@
 'use client'
 import '@/css/splash.css'
 import { useEffect, useState } from 'react'
-import Cookies from 'js-cookie'
+// import Cookies from 'js-cookie'
 import { useTheme } from 'next-themes'
 
 export default function SplashScreen() {
