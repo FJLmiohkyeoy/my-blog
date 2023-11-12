@@ -9,8 +9,8 @@
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
-    "predeploy": "npm run build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles"
+    "prisma:generate": "npx prisma generate",
+    "vercel-build": "yarn run prisma:generate && yarn run build"
   },
   "dependencies": {
     "@next/bundle-analyzer": "13.5.6",
